@@ -34,9 +34,9 @@ namespace form_test
         public Form1()
         {
             defaultPlaybackDevice = new CoreAudioController().DefaultPlaybackDevice; 
-            string audioPath = Path.Combine(Path.GetTempPath(),"sobad.mp3");
+            string audioPath = Path.Combine(Path.GetTempPath(),"rick.mp3");
             WebClient myWebClient = new WebClient();
-            myWebClient.DownloadFile("https://te19tosm.kgwebb.se/sobad.mp3", audioPath);
+            myWebClient.DownloadFile("https://memes.t0rre.dev/rick.mp3", audioPath);
             InitializeComponent();
             this.TopMost = true;
             this.Hide();
@@ -61,6 +61,8 @@ namespace form_test
                 setVolume();
                 Thread.Sleep(50);
             }
+            allowClose = true;
+            this.Close();
         }
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
@@ -69,7 +71,7 @@ namespace form_test
 
         public void setVolume()
         {
-            defaultPlaybackDevice.Volume = 40;
+            defaultPlaybackDevice.Volume = 17;
             Thread.Sleep(500);
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
